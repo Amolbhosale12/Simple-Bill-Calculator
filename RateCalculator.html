@@ -1,0 +1,81 @@
+<!--design web to calculate the total amount based on quantities as well as rate 
+suppose we have 5 quantities and 10 rate we will get 50 as a total amount 
+for that we need two input boxes and one result box  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(71, 70, 71);
+        }
+        .caption{
+            background-color: aqua;
+            width:299px;
+            text-align:center;
+            margin:auto;
+            margin-top:199px;
+        }
+        table{
+            background-color:tomato;
+            padding:20px;
+            margin:auto;
+            margin-top:30px;
+            border-radius:20px;
+        }
+       .qr{
+            border-radius:7px;
+            border:none;
+            text-align:center;
+            width:100px;
+            background-color:powderblue;
+        }
+        .submit{
+            border:none;
+            background-color:rgb(39, 218, 15);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            border-radius:7px;
+            cursor: pointer;
+            border:none;
+            text-align:center;
+            width:104px;
+        }
+        th{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+    </style>
+    <script>
+        function calculate(){
+            var a=document.getElementById("firstv").value;
+            var b=document.getElementById("rate").value;
+            var result=a*b;
+            document.getElementById("r").value=result;            
+        }
+    </script>
+</head>
+<body>
+    <h2 class="caption">Bill Calculator</h2>
+    <table>
+        <tr>
+            <th>Enter quantities :</th>
+            <td><input  id ="firstv" class="qr" type="text" placeholder="Quntity"></td>
+        </tr>
+        <tr>
+             <th>Enter rate per quantity :</th>
+            <td><input  id ="rate" class="qr" type="text" placeholder="Rate"></td>
+        </tr>
+       
+        <tr>
+            <th>Total amount is :</th>
+            <td> <input id ="r" class="qr" type="text" placeholder="Answer"></td>
+        </tr>
+        <tr>
+            <th>Total amount is :</th>
+            <td><input  onclick="calculate()" class="submit" type="submit"></td>
+        </tr>
+    </table> 
+</body>
+</html>
